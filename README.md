@@ -133,7 +133,14 @@ Transaction
 
 ## Setup
 
-Install dependencies:
+Create and activate a local virtual environment:
+
+```powershell
+python -m venv .venv
+.venv\Scripts\Activate.ps1
+```
+
+If `venv` gives you trouble on this machine, using the existing project `.venv` is fine. Once activated, install dependencies:
 
 ```powershell
 python -m pip install -r requirements.txt
@@ -156,7 +163,7 @@ http://127.0.0.1:8000/docs
 Use this command from the project root:
 
 ```powershell
-python -m pytest tests -q -p no:cacheprovider
+.venv\Scripts\python.exe -m pytest tests -q -p no:cacheprovider
 ```
 
 Current automated coverage includes:
